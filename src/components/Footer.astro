@@ -1,0 +1,88 @@
+---
+import Icon from "./ui/Icon.astro";
+import Link from "./ui/link.astro";
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="group">
+    
+    <p>&copy; {currentYear} <a href="https://www.wyatthowlett.ca">WyattHowlett.ca</a> | Website By <a href="https://www.howltechsolutions.com">Wyatt Howlett</a> | All Rights Reserved.</p>
+  </div>
+  <p class="socials">
+    <Link class="link" href="https://github.com/Whowlett13" external>Github</Link>
+  
+    <Link class="link" href="https://www.howltechsolutions.com" external>
+     HowlTech Solutions
+    </Link>
+    <Link
+      class="link"
+      href="https://www.linkedin.com/in/wyatt-howlett-399849254/"
+      external
+    >
+      LinkedIn
+    </Link>
+    <Link
+    class="link"
+    href="https://www.instagram.com/howltechsolutions/"
+    external
+  >
+    Instagram
+  </Link>
+  <!-- <Link
+    class="link"
+    href="https://www.facebook.com/profile.php?id=61559334944246/"
+    external
+  >
+    Facebook
+  </Link> -->
+  </p>
+</footer>
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: auto;
+    padding: 3rem 2rem 3rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+
+    .link {
+      color: var(--gray-400);
+    }
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2.5rem 5rem;
+    }
+
+    .group {
+      flex-direction: row;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      justify-content: flex-end;
+    }
+  }
+</style>

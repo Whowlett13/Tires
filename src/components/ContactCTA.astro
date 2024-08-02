@@ -1,0 +1,124 @@
+---
+import ContactForm from './ContactForm.astro';
+import Icon, { Props as IconProps } from "./ui/Icon.astro";
+
+const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/wyatt-howlett/",
+    icon: "linkedin",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/whowlett13",
+    icon: "github-logo",
+  },
+  {
+    label: "Company Website",
+    href: "https://www.howltechsolutions.com",
+    icon: "website",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/howltechsolutions",
+    icon: "instagram",
+  },
+  
+ 
+];
+---
+
+<aside>
+  <div class="contact-info stack gap-4 text-center">
+    <h2 class="contact-info__heading text-center">Want to get in touch?</h2><div class="socials">
+      {
+        iconLinks.map(({ href, icon, label }) => (
+          <a href={href} class="social pt-10" target="_blank" title={label}>
+            <Icon icon={icon} />
+          </a>
+        ))
+      }
+    </div>
+    <p class="contact-info__description text-center pt-10">
+      Find me across various social media platforms. Feel free to reach out
+      through any of these channels. Lets Your Ideas Into An Interactive Product !
+    </p>
+  </div>
+  <div>
+    <ContactForm />
+       
+    
+    
+    
+  </div>
+</aside>
+
+<style lang="scss">
+  aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-800);
+    padding: 3rem 2rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .contact-info {
+    text-align: center;
+
+    &__heading {
+      font-size: var(--text-2xl);
+    }
+
+    &__description {
+      color: var(--gray-300);
+    }
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    letter-spacing: 0.25em;
+    margin: 1rem 0;
+    font-size: var(--text-sm);
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: var(--text-2xl);
+
+    .social {
+      display: flex;
+      text-decoration: none;
+      color: var(--accent-dark);
+      transition: color var(--theme-transition);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-regular);
+      }
+    }
+  }
+
+  @media (min-width: 50em) {
+    aside {
+      padding: 5.5rem;
+      grid-template-columns: 5fr 3fr;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      text-align: left;
+      max-width: 35rem;
+
+      &__heading {
+        font-size: var(--text-3xl);
+      }
+    }
+  }
+</style>

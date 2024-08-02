@@ -1,0 +1,340 @@
+---
+import Icon from "./ui/Icon.astro";
+import Howl from "../content/images/HowlTech.png";
+import Dylan from "../content/images/dylanDrones.png";
+import OneTrack from "../content/images/OneTrackPro.png";
+import Portabella from "../content/images/Portabella Screenshot.png";
+import Company from "../content/images/HowltechSolutions.jpg";
+import Embers from "../content/images//EmbersScreenShot.png";
+import VoltWheels from "../content/images/voltwheels.png";
+import CodeQuiz from "../content/images/codeQuiz.png";
+import Weather from "../content/images/Weather.png";
+import Work from "../content/images/Work Day Scheduler.png";
+import Task from "../content/images/taskBusters.png";
+import TextE from "../content/images/justanothertexteditor.png";
+
+
+const { repo, link, description, language, languageColor } = Astro.props;
+
+---
+<!-- HowlTech Solutions -->
+<a class="repo-card" href="https://www.howltechsolutions.com/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">HowlTech Solutions</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Howl.src} alt="Restaurant Portabella" />
+  </div>
+  <p class="repo-card__description">
+    HowlTech Solutions we are passionate about crafting exceptional websites that elevate brands and drive results. With a strategic approach and creative excellence, we specialize in delivering high-quality web solutions tailored to your unique needs. From captivating designs to seamless user experiences, we're committed to helping your business thrive online. Linkedin where we post content related to Web Development and Programming for the company
+
+    We are open to Job opportunities where we can contribute, learn and grow. If you have a good opportunity that matches our skills and experience then don't hesitate to contact us.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- One Track Productions -->
+<a class="repo-card" href="https://www.onetrackpro.ca/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">One Track Productions</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={OneTrack.src} alt="One Track Productions" />
+  </div>
+  <p class="repo-card__description">
+    One Track Productions is a vibrant and dynamic company dedicated to curating unforgettable musical experiences that transcend boundaries and elevate the spirit. Since our inception in 2023, we have been at the forefront of the live music industry, orchestrating events that resonate with music enthusiasts worldwide.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Restaurant Portabella -->
+<a class="repo-card" href="https://www.portabella.ca/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Restaurant Portabella</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Portabella.src} alt="Restaurant Portabella" />
+  </div>
+  <p class="repo-card__description">
+    From Classic Favorites To Innovative Creations. Portabella Was Born Out Of A Dream To Provide Hudson With A Culinary Haven That Combines Flavors From Around The World With A Touch Of Local Authenticity.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Embers Hudson -->
+<a class="repo-card" href="https://embershudson.com/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Embers Hudson</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Embers.src} alt="Embers" />
+  </div>
+  <p class="repo-card__description">
+    Embers Restaurant & Bar is the collective vision of our team. Our combined experience and passion are what have brought EMBERS to life. With strong roots in Hudson, we wish to bring something special to our community and all who visit our flourishing town. Blending chic contemporary ambiance, detailed service and our menu of authentic local classics and creative dishes, EMBERS will provide the ideal place for friends and family to gather and celebrate life’s moments. Capturing the character of our community, we strive to deliver comfort, quality and consistency to inspire loyalty in our guests and employees.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Dylan Drones -->
+<a class="repo-card" href="https://www.instagram.com/dylan.drones/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">HeliCal Sky</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Dylan.src} alt="Dylan" />
+  </div>
+  <p class="repo-card__description">
+    F📍 Ottawa, Canada | Transport Canada Certified 🔒 FPV | Drone Videography | Aerial Photography
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- VoltWheels -->
+<a class="repo-card" href="https://voltwheels-a4fbaac8309b.herokuapp.com/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">VoltWheels</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={VoltWheels.src} alt="VoltWheels" />
+  </div>
+  <p class="repo-card__description">
+    This website allows users to view, buy and sell electric vehicles. Users must be signed up and logged in to buy cars and to create car ads. The site uses stripe to accept payments for vehicles.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Code Quiz
+<a class="repo-card" href="ttps://whowlett13.github.io/Web-Api-Challange-4.github.io/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Code Quiz</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={CodeQuiz.src} alt="Code Quiz" />
+  </div>
+  <p class="repo-card__description">
+    This is a timed coding quiz with multiple-choice questions. This app is written from scratch.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a> -->
+<!-- Weather -->
+<a class="repo-card" href="https://whowlett13.github.io/Weather-Dashboard.github.io/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Weather Api Application</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Weather.src} alt="Weather" />
+  </div>
+  <p class="repo-card__description">
+    This project is a Weather Dashboard application. The user can look for different cities and their corresponding 5-day forecast weather.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Work Day Scheduler -->
+<a class="repo-card" href="https://whowlett13.github.io/Work-Day-Scheduler.github.io/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Work Day Scheduler</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Work.src} alt="Work" />
+  </div>
+  <p class="repo-card__description">
+    A work day scheduler that displays the time and date. It has color coded fields based on the time of day, (grey being past, red being current hour and green being future). When the time field is filled out the user can press the save button on the right hand side to save the inputted task for when the page is reloaded or refreshed.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- Just A Text Editor -->
+<a class="repo-card" href="https://agile-reaches-37687-d185bb673bfe.herokuapp.com/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Just A Text Editor</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={TextE.src} alt="Work" />
+  </div>
+  <p class="repo-card__description">
+    This application takes an existing text editor app and adds functionality for it to work as a PWA and function offline. This application is deployed through Heroku.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a>
+<!-- TaskBusters -->
+<!-- <a class="repo-card" href="https://agile-reaches-37687-d185bb673bfe.herokuapp.com/" title="View repo" target="_blank">
+  <div class="repo-card__header">
+    <h3 class="repo-card__title">Task Busters</h3>
+    <Icon icon="website" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={Task.src} alt="Work" />
+  </div>
+  <p class="repo-card__description">
+    This application takes an existing text editor app and adds functionality for it to work as a PWA and function offline. This application is deployed through Heroku.
+  </p>
+  <div class="repo-card__footer">
+    <span
+      class="repo-card__footer-lang-color"
+      style={{
+        backgroundColor: languageColor,
+      }}></span>
+    <span class="repo-card__footer-language">{language}</span>
+  </div>
+</a> -->
+<style lang="scss">
+  .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  
+  }
+  .imgContainer img{
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+  .gitHub{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 100px;
+  }
+
+  .repo-card {
+    display: block;
+    text-decoration: none;
+    padding: 1.75rem;
+    background: var(--gradient-subtle);
+    border: 2.5px solid var(--accent-regular);
+    box-shadow: var(--shadow-sm);
+    border-radius: 1rem;
+    transition: var(--theme-transition);
+
+    &:hover {
+      box-shadow: var(--shadow-md);
+      border: 2.5px solid var(--accent-dark);
+      filter: brightness(1.1);
+      transform: translateY(-0.5rem);
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+
+    &__title {
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-xl);
+      padding-bottom: 50px;
+    }
+
+    &__description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.8rem 0;
+      color: var(--gray-200);
+
+      --max-lines: 3;
+      overflow: hidden;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: var(--max-lines);
+
+      @media only screen and (min-width: 50em) {
+        min-height: 4.5rem;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      &-language {
+        color: var(--gray-200);
+        font-weight: bold;
+      }
+
+      &-lang-color {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+      }
+    }
+  }
+</style>

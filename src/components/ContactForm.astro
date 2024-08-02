@@ -1,0 +1,181 @@
+---
+
+---
+
+<div
+  class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+>
+  <h2 class="text-center ">Contact Me</h2>
+</div>
+<section class="w-5/6 rounded-xl mx-auto bg-fit">
+  <div
+    class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
+  >
+    <form action="https://usebasin.com/f/09bb4ba27ed3" method="POST">
+      <div class="py-5">
+        <label for="fName" class="text-primary font-semibold text-white  ">
+          First Name:
+          <input
+            type="text"
+            name="First Name:"
+            class="w-full text-white rounded-md h-10 px-2"
+            placeholder="Enter Your First Name"
+            required
+          />
+        </label>
+        <div class="py-5">
+          <label for="lName" class="text-primary font-semibold text-white ">
+            Last Name:
+            <input
+              type="text"
+              name="Last Name:"
+              class="w-full text-white rounded-md h-10 px-2"
+              placeholder="Enter Your Last Name"
+              required
+            />
+          </label>
+        </div>
+      </div>
+      <div class="py-5">
+        <label for="phone" class="text-primary font-semibold text-white">
+          Phone Number:
+          <input
+            type="tel"
+            name="Phone Number:"
+            min="1"
+            max="9"
+            class="w-full text-white rounded-md h-10 px-2"
+            placeholder="Enter Your Phone Number"
+            required
+          />
+        </label>
+      </div>
+      <div class="py-5">
+        <label for="email" class="text-primary font-semibold text-white ">
+          Email Address:
+          <input
+            type="email"
+            name="Email"
+            class="w-full text-white rounded-md h-10 px-2"
+            placeholder="Enter Your Email Address"
+            required
+          />
+        </label>
+      </div>
+      <div class="pb-10">
+        <label for="message" class="text-primary font-semibold text-white  pb-10">
+          Message:
+          <textarea name="Message" class="w-full text-white rounded-md h-28 p-2"
+          placeholder="Message"
+          ></textarea>
+        </label>
+      </div>
+      <div class="text-center "><button type="submit" class="button-36">Submit</button></div>
+    </form>
+  </div>
+</section>
+
+<style lang="scss">
+
+
+/* CSS */
+.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 3rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+  .primary:link,
+  .primary:visited {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+
+    &:hover,
+    &:focus {
+      text-decoration-color: currentColor;
+    }
+  }
+
+.contact-info {
+  text-align: center;
+
+  &__heading {
+    font-size: var(--text-2xl);
+  }
+
+  &__description {
+    color: var(--gray-999-basis);
+  }
+}
+.rounded:link,
+  .rounded:visited {
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    color: var(--accent-text-over);
+    border: 2px solid var(--accent-regular);
+    background-color: var(--accent-regular);
+    border-radius: 999rem;
+    font-size: var(--text-md);
+    line-height: 1.35;
+    white-space: nowrap;
+    transition: all var(--theme-transition);
+
+    &.inverted {
+      background-color: transparent;
+      border: 2px solid var(--accent-dark);
+      color: var(--accent-dark);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-dark);
+      border: 2px solid var(--accent-dark);
+      color: var(--accent-light);
+    }
+  }
+@media (min-width: 50em) {
+    aside {
+      padding: 5.5rem;
+      grid-template-columns: 5fr 3fr;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      text-align: left;
+      max-width: 35rem;
+
+      &__heading {
+        font-size: var(--text-3xl);
+      }
+    }
+  }
+
+</style>
