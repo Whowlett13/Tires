@@ -1,13 +1,11 @@
-import { defineConfig } from 'astro/config'
-import mdx from '@astrojs/mdx'
-import tailwind from '@astrojs/tailwind'
-import compress from 'astro-compress'
-import icon from "astro-icon"
+import { defineConfig } from "astro/config"
+import mdx from "@astrojs/mdx"
+import sitemap from "@astrojs/sitemap"
+import tailwind from "@astrojs/tailwind"
+import solidJs from "@astrojs/solid-js"
 
 // https://astro.build/config
 export default defineConfig({
-  compressHTML: true,
-  integrations: [mdx(), icon(), tailwind({
-    applyBaseStyles: false,
-  }), compress()],
+  site: "https://astro-sphere-demo.vercel.app",
+  integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
 })
