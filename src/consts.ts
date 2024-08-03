@@ -2,7 +2,7 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Car Basics",
+  TITLE: "Auto Solutions",
   DESCRIPTION: "Welcome to the place to be if you need seasonal maintenance.",
   AUTHOR: "Wyatt Howlett",
 }
@@ -56,14 +56,14 @@ export const SOCIALS: Socials = [
   { 
     NAME: "Email",
     ICON: "email", 
-    TEXT: "markhorn.dev@gmail.com",
-    HREF: "mailto:markhorn.dev@gmail.com",
+    TEXT: "howltechsolutions@gmail.com",
+    HREF: "mailto:howltechsolutions@gmail.com",
   },
   { 
     NAME: "Github",
     ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
+    TEXT: "Whowlett13",
+    HREF: "https://github.com/whowlett13/"
   },
   { 
     NAME: "LinkedIn",
