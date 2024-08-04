@@ -1,98 +1,125 @@
 ---
-import { getCollection } from "astro:content"
-import PageLayout from "@layouts/PageLayout.astro"
-import ArrowCard from "@components/ArrowCard"
-import StackCard from "@components/StackCard.astro"
-import { SITE, SOCIALS } from "@consts"
-import TwinklingStars from "@components/TwinklingStars.astro"
-import MeteorShower from "@components/MeteorShower.astro"
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard";
+import StackCard from "@components/StackCard.astro";
+import { SITE, SOCIALS } from "@consts";
+import TwinklingStars from "@components/TwinklingStars.astro";
+import MeteorShower from "@components/MeteorShower.astro";
 
 const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
+  .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .slice(0, 3);
 
 const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
+  .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .slice(0, 3);
 
 const stack = [
-  { 
-    text: "Astro", 
-    icon: "astro", 
-    href: "https://astro.build" 
+  {
+    text: "Astro",
+    icon: "astro",
+    href: "https://astro.build",
   },
-  { 
-    text: "Javascript", 
-    icon: "javascript", 
-    href: "https://www.javascript.com" 
+  {
+    text: "Javascript",
+    icon: "javascript",
+    href: "https://www.javascript.com",
   },
-  { 
-    text: "Typescript", 
-    icon: "typescript", 
-    href: "https://www.typescriptlang.org" 
+  {
+    text: "Typescript",
+    icon: "typescript",
+    href: "https://www.typescriptlang.org",
   },
-  { 
-    text: "Tailwind", 
-    icon: "tailwind", 
-    href: "https://tailwindcss.com" 
+  {
+    text: "Tailwind",
+    icon: "tailwind",
+    href: "https://tailwindcss.com",
   },
-]
+];
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
-
   <!-- Light Mode: Particles -->
-  <div class='absolute inset-0 block dark:hidden'>
-    <div id='particles1' class='fixed inset-0'></div>
-    <div id='particles2' class='fixed inset-0'></div>
-    <div id='particles3' class='fixed inset-0'></div>
+  <div class="absolute inset-0 block dark:hidden">
+    <div id="particles1" class="fixed inset-0"></div>
+    <div id="particles2" class="fixed inset-0"></div>
+    <div id="particles3" class="fixed inset-0"></div>
   </div>
 
   <!-- Dark Theme: Stars -->
-  <div class='absolute inset-0 bg-black hidden dark:block'>
-    <div id='stars1' class='fixed inset-0'></div>
-    <div id='stars2' class='fixed inset-0'></div>
-    <div id='stars3' class='fixed inset-0'></div>
+  <div class="absolute inset-0 bg-black hidden dark:block">
+    <div id="stars1" class="fixed inset-0"></div>
+    <div id="stars2" class="fixed inset-0"></div>
+    <div id="stars3" class="fixed inset-0"></div>
   </div>
 
   <!-- Dark Theme: Twinkling Stars / Metors -->
   <div id="galaxy" class="fixed inset-0">
     <div class="hidden dark:block">
-      <TwinklingStars/>
-      <MeteorShower/>
+      <TwinklingStars />
+      <MeteorShower />
     </div>
   </div>
 
   <script is:inline src="/js/bg.js"></script>
-  
+
   <!-- HERO -->
   <section class="relative h-screen w-full">
-    <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
-      <div id="crescent" class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
-        <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
-          <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
+    <div
+      id="planetcont"
+      class="animate absolute inset-0 top-1/4 overflow-hidden"
+    >
+      <div
+        id="crescent"
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%"
+      >
+        <div
+          id="planet"
+          class="w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center"
+        >
+          <div
+            id="blur"
+            class="w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl"
+          >
+          </div>
         </div>
       </div>
     </div>
-    <div class="animate absolute h-full w-full flex items-center justify-center">
-      <div class='relative w-full h-full flex items-center justify-center'>
-        <div class='p-5 text-center'>
-          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
+    <div
+      class="animate absolute h-full w-full flex items-center justify-center"
+    >
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div class="p-5 text-center">
+          <p
+            class="animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75"
+          >
             Hello, I am ...
           </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+          <p
+            class="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white"
+          >
             Doing Seasonal Tire Changes
           </p>
-          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
+          <p class="animated text-sm md:text-base lg:text-lg opacity-75">
             Currently only on rims.
           </p>
-          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
-            <a href='#contact' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+          <div
+            id="ctaButtons"
+            class="animated flex flex-wrap gap-4 justify-center mt-5"
+          >
+            <a
+              href="#contact"
+              class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend animate"
+            >
               Get In Touch
             </a>
-            <a href='#contact' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+            <a
+              href="#contact"
+              class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend animate"
+            >
               My Experience
             </a>
           </div>
@@ -103,16 +130,21 @@ const stack = [
 
   <div class="relative bg-white dark:bg-black">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
-
       <!-- About Section -->
-      <section class="animate">
+      <section class="animate text-center">
         <article>
-          <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
-          <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
-          <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
-          <p>Now</p>
-          <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
+          <p>
+            I am<b><i>Wyatt Howlett</i></b>, I focus on tire installation, oil
+            changes, and brake services.
+          </p>
+          I’m passionate about helping you keep your vehicle in top shape and getting
+          you back on the road with confidence. I take pride in offering honest,
+          straightforward services and treating every car as if it were my own. My
+          goal is to provide you with reliable work and friendly, personal service—something
+          I believe can make a big difference. Whether you need new tires, a fresh
+          oil change, or a brake check, I’m here to make the process as smooth and
+          hassle-free as possible. I look forward to the opportunity to work with
+          you and help ensure your vehicle stays safe and running well.
         </article>
       </section>
 
@@ -142,7 +174,7 @@ const stack = [
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">
+          <p class="font-semibold text-black dark:text-white text-center">
             Skills
           </p>
           <!-- <div class="flex flex-wrap items-center gap-2 mt-5">
@@ -154,15 +186,17 @@ const stack = [
               />
             ))}
           </div> -->
-          <div>
-            Tire installation, Breaks & Oil Changes
-            
+          <div class="text-center">
+            <ul>
+              <li>Tire Installation</li><br />
+              <li>Brakes</li><br />
+              <li>Oil Changes</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <!-- Project Preview Section -->
-      <!-- <section class="animate">
+        <!-- Project Preview Section -->
+        <!-- <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
@@ -184,91 +218,238 @@ const stack = [
         </div>
       </section> -->
 
-      <!-- Contact Section -->
-      <div
-      class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
-    >
-      <h2 class="text-center " id="contact">Contact Me</h2>
-    </div>
-    <section class="w-5/6 rounded-xl mx-auto bg-fit">
-      <div
-        class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
-      >
-        <form action="https://usebasin.com/f/09bb4ba27ed3" method="POST">
-          <div class="py-5">
-            <label for="fName" class="text-primary font-semibold text-white  ">
-              First Name:
-              <input
-                type="text"
-                name="First Name:"
-                class="w-full text-white rounded-md h-10 px-2"
-                placeholder="Enter Your First Name"
-                required
-              />
-            </label>
-            <div class="py-5">
-              <label for="lName" class="text-primary font-semibold text-white ">
-                Last Name:
+        <!-- Contact Section -->
+        <div
+          class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+        >
+          <h2
+            class="text-center font-semibold text-black dark:text-white"
+            id="contact"
+          >
+            Contact Me
+          </h2>
+        </div>
+        <section class="w-5/6 rounded-xl mx-auto bg-fit">
+          <div
+            class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
+          >
+            <form action="https://usebasin.com/f/09bb4ba27ed3" method="POST">
+              <div class="py-5">
+                <label
+                  for="fName"
+                  class="text-primary font-semibold text-white"
+                >
+                  First Name:
+                  <input
+                    type="text"
+                    name="First Name:"
+                    class="w-full text-white rounded-md h-10 px-2"
+                    placeholder="Enter Your First Name"
+                    required
+                  />
+                </label>
+                <div class="py-5">
+                  <label
+                    for="lName"
+                    class="text-primary font-semibold text-white"
+                  >
+                    Last Name:
+                    <input
+                      type="text"
+                      name="Last Name:"
+                      class="w-full text-white rounded-md h-10 px-2"
+                      placeholder="Enter Your Last Name"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+              <p class="text-primary font-semibold text-white">
+                What services are you interested in?
+              </p>
+              <div>
                 <input
-                  type="text"
-                  name="Last Name:"
-                  class="w-full text-white rounded-md h-10 px-2"
-                  placeholder="Enter Your Last Name"
-                  required
+                  type="checkbox"
+                  id="Tires"
+                  name="Tire Install"
+                  value="Tires"
+                  
                 />
-              </label>
-            </div>
+                <label for="Tire Installation">Tire installation</label><br />
+                <input type="checkbox" id="Breaks" name="Breaks" value="Breaks" />
+                <label for="Breaks">Breaks</label><br />
+                <input type="checkbox" id="Oil" name="Oil Change" value="Oil" />
+                <label for="Oil">Oil Change</label>
+              </div>
+              <div class="py-5">
+                <label
+                  for="phone"
+                  class="text-primary font-semibold text-white"
+                >
+                  Phone Number:
+                  <input
+                    type="tel"
+                    name="Phone Number:"
+                    min="1"
+                    max="9"
+                    class="w-full text-white rounded-md h-10 px-2"
+                    placeholder="Enter Your Phone Number"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="py-5">
+                <label
+                  for="email"
+                  class="text-primary font-semibold text-white"
+                >
+                  Email Address:
+                  <input
+                    type="email"
+                    name="Email"
+                    class="w-full text-white rounded-md h-10 px-2"
+                    placeholder="Enter Your Email Address"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="pb-10">
+                <label
+                  for="year"
+                  class="text-primary font-semibold text-white pb-10"
+                >
+                  Year:
+                  <select
+                    name="Year"
+                    id="year"
+                    class="w-full text-white  rounded-md h-10 px-2"
+                    required
+                  >
+                    <!-- Example year options -->
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <!-- Add more years as needed -->
+                  </select>
+                </label>
+              </div>
+              <div class="pb-10">
+                <label
+                  for="car-make"
+                  class="text-primary font-semibold text-white pb-10"
+                >
+                  Car Make:
+                  <select
+                    name="CarMake"
+                    id="car-make"
+                    class="w-full text-white  rounded-md h-10 px-2"
+                    required
+                  >
+                    <option value="" disabled selected>Select Make</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="buick">Buick</option>
+                    <option value="cadillac">Cadillac</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="chrysler">Chrysler</option>
+
+                    <option value="dodge">Dodge</option>
+
+                    <option value="ford">Ford</option>
+                    <option value="genesis">Genesis</option>
+                    <option value="gmc">GMC</option>
+                    <option value="honda">Honda</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="infiniti">Infiniti</option>
+                    <option value="jaguar">Jaguar</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="kia">Kia</option>
+                    <option value="land-rover">Land Rover</option>
+                    <option value="lexus">Lexus</option>
+                    <option value="lincoln">Lincoln</option>
+
+                    <option value="mazda">Mazda</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="nissan">Nissan</option>
+
+                    <option value="subaru">Subaru</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                  </select>
+                </label>
+              </div>
+              <div class="pb-10">
+                <label
+                  for="Model"
+                  class="text-primary font-semibold text-white pb-10"
+                >
+                  Model:
+                  <textarea
+                    name="Model"
+                    class="w-full text-white rounded-md h-10 p-2"
+                    placeholder="Model"
+                    required></textarea>
+                </label>
+              </div>
+              <div class="pb-10">
+                <label
+                  for="message"
+                  class="text-primary font-semibold text-white pb-10"
+                >
+                  Message:
+                  <textarea
+                    name="Message"
+                    class="w-full text-white rounded-md h-28 p-2"
+                    placeholder="Message"></textarea>
+                </label>
+              </div>
+              
+              
+              <div class="text-center">
+                <button type="submit" class="button-36">Submit</button>
+              </div>
+            </form>
           </div>
-          <p class="text-primary font-semibold text-white  ">What services are you interested in?</p>
-<div>
-  <input type="checkbox" id="design" name="Tire Install" value="design">
-  <label for="Tire Installation">Tire installation</label><br>
-  <input type="checkbox" id="dev" name="Breaks" value="dev">
-  <label for="Breaks">Breaks</label><br>
-  <input type="checkbox" id="seo" name="Oil Change" value="seo">
-  <label for="Oil">Oil Change</label>
-</div>
-          <div class="py-5">
-            <label for="phone" class="text-primary font-semibold text-white">
-              Phone Number:
-              <input
-                type="tel"
-                name="Phone Number:"
-                min="1"
-                max="9"
-                class="w-full text-white rounded-md h-10 px-2"
-                placeholder="Enter Your Phone Number"
-                required
-              />
-            </label>
-          </div>
-          <div class="py-5">
-            <label for="email" class="text-primary font-semibold text-white ">
-              Email Address:
-              <input
-                type="email"
-                name="Email"
-                class="w-full text-white rounded-md h-10 px-2"
-                placeholder="Enter Your Email Address"
-                required
-              />
-            </label>
-          </div>
-          <div class="pb-10">
-            <label for="message" class="text-primary font-semibold text-white  pb-10">
-              Message:
-              <textarea name="Message" class="w-full text-white rounded-md h-28 p-2"
-              placeholder="Message"
-              ></textarea>
-            </label>
-          </div>
-          <div class="text-center "><button type="submit" class="button-36">Submit</button></div>
-        </form>
-      </div>
-    </section>
-    
-   
-      <!-- <section class="animate">
+        </section>
+
+        <!-- <section class="animate">
         <div>
           <p class="font-semibold text-black dark:text-white">
             Let's Connect
@@ -293,124 +474,142 @@ const stack = [
             ))}
         </div>
       </section> -->
+      </section>
     </div>
+    <footer class="bg-primary bg-opacity-5">
+      <section class="w-5/6 mx-auto">
+        <hr class="text-primary opacity-10" />
+        <p
+          class="mt-5 text-center text-xs leading-5 text-gray-500 pb-10 animate"
+        >
+          &copy; {new Date().getFullYear()}
+          <a aria-label="Home" href="https://www.howltechsolutions.com"
+            ><strong class="animate">HowlTechSolutions.com</strong></a
+          > | Website By{" "}
+          <a href="https://www.wyatthowlett.ca" target="_blank">
+            <strong class="animate">Wyatt Howlett</strong>
+          </a>{" "}
+          | All Rights reserved.
+        </p>
+      </section>
+    </footer>
   </div>
-  <footer class="bg-primary bg-opacity-5">
-    <section class="w-5/6 mx-auto">
-           
-      <hr class="text-primary opacity-10 " />
-      <p class="mt-5 text-center text-xs leading-5 text-gray-500 pb-10">
-        &copy; {new Date().getFullYear()} <a aria-label="Home" href="https://www.howltechsolutions.com"><strong>HowlTechSolutions.com</strong></a> | Website By{" "}
-        <a href="https://www.wyatthowlett.ca" target="_blank">
-          <strong>Wyatt Howlett</strong>
-        </a>{" "}
-        | All Rights reserved.
-      </p>
-    </section>
-  </footer>
-  
-</PageLayout>
- <style lang="scss">
-    
-    
+  <style lang="scss">
     /* CSS */
     .button-36 {
-      background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+      background-image: linear-gradient(
+        92.88deg,
+        #455eb5 9.16%,
+        #5643cc 43.89%,
+        #673fd7 64.72%
+      );
       border-radius: 8px;
       border-style: none;
       box-sizing: border-box;
-      color: #FFFFFF;
+      color: #ffffff;
       cursor: pointer;
       flex-shrink: 0;
-      font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      font-family:
+        "Inter UI",
+        "SF Pro Display",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
       font-size: 16px;
       font-weight: 500;
       height: 3rem;
       padding: 0 1.6rem;
       text-align: center;
       text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-      transition: all .5s;
+      transition: all 0.5s;
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
     }
-    
+
     .button-36:hover {
       box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-      transition-duration: .1s;
+      transition-duration: 0.1s;
     }
-    
+
     @media (min-width: 768px) {
       .button-36 {
         padding: 0 2.6rem;
       }
     }
-      .primary:link,
-      .primary:visited {
-        text-decoration: 1px solid underline transparent;
-        text-underline-offset: 0.25em;
-        transition: text-decoration-color var(--theme-transition);
-    
-        &:hover,
-        &:focus {
-          text-decoration-color: currentColor;
-        }
+    .primary:link,
+    .primary:visited {
+      text-decoration: 1px solid underline transparent;
+      text-underline-offset: 0.25em;
+      transition: text-decoration-color var(--theme-transition);
+
+      &:hover,
+      &:focus {
+        text-decoration-color: currentColor;
       }
-    
+    }
+
     .contact-info {
       text-align: center;
-    
+
       &__heading {
         font-size: var(--text-2xl);
       }
-    
+
       &__description {
         color: var(--gray-999-basis);
       }
     }
     .rounded:link,
-      .rounded:visited {
-        display: flex;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        gap: 0.5rem;
-        color: var(--accent-text-over);
-        border: 2px solid var(--accent-regular);
-        background-color: var(--accent-regular);
-        border-radius: 999rem;
-        font-size: var(--text-md);
-        line-height: 1.35;
-        white-space: nowrap;
-        transition: all var(--theme-transition);
-    
-        &.inverted {
-          background-color: transparent;
-          border: 2px solid var(--accent-dark);
-          color: var(--accent-dark);
-        }
-    
-        &:hover,
-        &:focus {
-          background-color: var(--accent-dark);
-          border: 2px solid var(--accent-dark);
-          color: var(--accent-light);
-        }
+    .rounded:visited {
+      display: flex;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      gap: 0.5rem;
+      color: var(--accent-text-over);
+      border: 2px solid var(--accent-regular);
+      background-color: var(--accent-regular);
+      border-radius: 999rem;
+      font-size: var(--text-md);
+      line-height: 1.35;
+      white-space: nowrap;
+      transition: all var(--theme-transition);
+
+      &.inverted {
+        background-color: transparent;
+        border: 2px solid var(--accent-dark);
+        color: var(--accent-dark);
       }
+
+      &:hover,
+      &:focus {
+        background-color: var(--accent-dark);
+        border: 2px solid var(--accent-dark);
+        color: var(--accent-light);
+      }
+    }
     @media (min-width: 50em) {
-        aside {
-          padding: 5.5rem;
-          grid-template-columns: 5fr 3fr;
-          justify-content: space-between;
-        }
-    
-        .contact-info {
-          text-align: left;
-          max-width: 35rem;
-    
-          &__heading {
-            font-size: var(--text-3xl);
-          }
+      aside {
+        padding: 5.5rem;
+        grid-template-columns: 5fr 3fr;
+        justify-content: space-between;
+      }
+
+      .contact-info {
+        text-align: left;
+        max-width: 35rem;
+
+        &__heading {
+          font-size: var(--text-3xl);
         }
       }
-    
-    </style>
+    }
+  </style>
+</PageLayout>
