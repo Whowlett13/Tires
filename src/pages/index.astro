@@ -186,17 +186,19 @@ const stack = [
               />
             ))}
           </div> -->
-          <div class="text-center">
-            <ul>
-              <li>Tire Installation</li><br />
-              <li>Brakes</li><br />
-              <li>Oil Changes</li>
+          <div class="text-center px-5 my-8">
+            <ul class="list-none p-0 m-0"></a>
+              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Tire Installation</a></li>
+
+              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Brakes</a></li>
+              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Oil Changes</a></li>
             </ul>
           </div>
         </div>
+      </section>
 
-        <!-- Project Preview Section -->
-        <!-- <section class="animate">
+      <!-- Project Preview Section -->
+      <!-- <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
@@ -218,238 +220,234 @@ const stack = [
         </div>
       </section> -->
 
-        <!-- Contact Section -->
-        <div
-          class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+      <!-- Contact Section -->
+      <div
+        class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+      >
+        <h2
+          class="text-center font-semibold text-black dark:text-white"
+          id="contact"
         >
-          <h2
-            class="text-center font-semibold text-black dark:text-white"
-            id="contact"
-          >
-            Contact Me
-          </h2>
-        </div>
-        <section class="w-5/6 rounded-xl mx-auto bg-fit">
-          <div
-            class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
-          >
-            <form action="https://usebasin.com/f/09bb4ba27ed3" method="POST">
+          Contact Me
+        </h2>
+      </div>
+      <section class="w-5/6 rounded-xl mx-auto bg-fit">
+        <div
+          class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
+        >
+          <div action="https://usebasin.com/f/09bb4ba27ed3" method="POST">
+            <div class="py-5">
+              <label for="fName" class="text-primary font-semibold text-white">
+                First Name:
+                <input
+                  type="text"
+                  name="First Name:"
+                  class="w-full text-white rounded-md h-10 px-2"
+                  placeholder="Enter Your First Name"
+                  required
+                />
+              </label>
               <div class="py-5">
                 <label
-                  for="fName"
+                  for="lName"
                   class="text-primary font-semibold text-white"
                 >
-                  First Name:
+                  Last Name:
                   <input
                     type="text"
-                    name="First Name:"
+                    name="Last Name:"
                     class="w-full text-white rounded-md h-10 px-2"
-                    placeholder="Enter Your First Name"
-                    required
-                  />
-                </label>
-                <div class="py-5">
-                  <label
-                    for="lName"
-                    class="text-primary font-semibold text-white"
-                  >
-                    Last Name:
-                    <input
-                      type="text"
-                      name="Last Name:"
-                      class="w-full text-white rounded-md h-10 px-2"
-                      placeholder="Enter Your Last Name"
-                      required
-                    />
-                  </label>
-                </div>
-              </div>
-              <p class="text-primary font-semibold text-white">
-                What services are you interested in?
-              </p>
-              <div>
-                <input
-                  type="checkbox"
-                  id="Tires"
-                  name="Tire Install"
-                  value="Tires"
-                  
-                />
-                <label for="Tire Installation">Tire installation</label><br />
-                <input type="checkbox" id="Breaks" name="Breaks" value="Breaks" />
-                <label for="Breaks">Breaks</label><br />
-                <input type="checkbox" id="Oil" name="Oil Change" value="Oil" />
-                <label for="Oil">Oil Change</label>
-              </div>
-              <div class="py-5">
-                <label
-                  for="phone"
-                  class="text-primary font-semibold text-white"
-                >
-                  Phone Number:
-                  <input
-                    type="tel"
-                    name="Phone Number:"
-                    min="1"
-                    max="9"
-                    class="w-full text-white rounded-md h-10 px-2"
-                    placeholder="Enter Your Phone Number"
+                    placeholder="Enter Your Last Name"
                     required
                   />
                 </label>
               </div>
-              <div class="py-5">
-                <label
-                  for="email"
-                  class="text-primary font-semibold text-white"
-                >
-                  Email Address:
-                  <input
-                    type="email"
-                    name="Email"
-                    class="w-full text-white rounded-md h-10 px-2"
-                    placeholder="Enter Your Email Address"
-                    required
-                  />
-                </label>
-              </div>
-              <div class="pb-10">
-                <label
-                  for="year"
-                  class="text-primary font-semibold text-white pb-10"
-                >
-                  Year:
-                  <select
-                    name="Year"
-                    id="year"
-                    class="w-full text-white  rounded-md h-10 px-2"
-                    required
-                  >
-                    <!-- Example year options -->
-                    <option value="" disabled selected>Select Year</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                    <option value="2018">2018</option>
-                    <option value="2017">2017</option>
-                    <option value="2016">2016</option>
-                    <option value="2015">2015</option>
-                    <option value="2014">2014</option>
-                    <option value="2013">2013</option>
-                    <option value="2012">2012</option>
-                    <option value="2011">2011</option>
-                    <option value="2010">2010</option>
-                    <option value="2009">2009</option>
-                    <option value="2008">2008</option>
-                    <option value="2007">2007</option>
-                    <option value="2006">2006</option>
-                    <option value="2005">2005</option>
-                    <option value="2004">2004</option>
-                    <option value="2003">2003</option>
-                    <option value="2002">2002</option>
-                    <option value="2001">2001</option>
-                    <option value="2000">2000</option>
-                    <option value="1999">1999</option>
-                    <option value="1998">1998</option>
-                    <option value="1997">1997</option>
-                    <option value="1996">1996</option>
-                    <option value="1995">1995</option>
-                    <option value="1994">1994</option>
-                    <option value="1993">1993</option>
-                    <option value="1992">1992</option>
-                    <option value="1991">1991</option>
-                    <option value="1990">1990</option>
-                    <!-- Add more years as needed -->
-                  </select>
-                </label>
-              </div>
-              <div class="pb-10">
-                <label
-                  for="car-make"
-                  class="text-primary font-semibold text-white pb-10"
-                >
-                  Car Make:
-                  <select
-                    name="CarMake"
-                    id="car-make"
-                    class="w-full text-white  rounded-md h-10 px-2"
-                    required
-                  >
-                    <option value="" disabled selected>Select Make</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="buick">Buick</option>
-                    <option value="cadillac">Cadillac</option>
-                    <option value="chevrolet">Chevrolet</option>
-                    <option value="chrysler">Chrysler</option>
-
-                    <option value="dodge">Dodge</option>
-
-                    <option value="ford">Ford</option>
-                    <option value="genesis">Genesis</option>
-                    <option value="gmc">GMC</option>
-                    <option value="honda">Honda</option>
-                    <option value="hyundai">Hyundai</option>
-                    <option value="infiniti">Infiniti</option>
-                    <option value="jaguar">Jaguar</option>
-                    <option value="jeep">Jeep</option>
-                    <option value="kia">Kia</option>
-                    <option value="land-rover">Land Rover</option>
-                    <option value="lexus">Lexus</option>
-                    <option value="lincoln">Lincoln</option>
-
-                    <option value="mazda">Mazda</option>
-                    <option value="mercedes">Mercedes-Benz</option>
-
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="nissan">Nissan</option>
-
-                    <option value="subaru">Subaru</option>
-                    <option value="suzuki">Suzuki</option>
-                    <option value="toyota">Toyota</option>
-                    <option value="volkswagen">Volkswagen</option>
-                    <option value="volvo">Volvo</option>
-                  </select>
-                </label>
-              </div>
-              <div class="pb-10">
-                <label
-                  for="Model"
-                  class="text-primary font-semibold text-white pb-10"
-                >
-                  Model:
-                  <textarea
-                    name="Model"
-                    class="w-full text-white rounded-md h-10 p-2"
-                    placeholder="Model"
-                    required></textarea>
-                </label>
-              </div>
-              <div class="pb-10">
-                <label
-                  for="message"
-                  class="text-primary font-semibold text-white pb-10"
-                >
-                  Message:
-                  <textarea
-                    name="Message"
-                    class="w-full text-white rounded-md h-28 p-2"
-                    placeholder="Message"></textarea>
-                </label>
-              </div>
-              
-              
-              <div class="text-center">
-                <button type="submit" class="button-36">Submit</button>
-              </div>
-            </form>
+            </div>
+            <p class="text-primary font-semibold text-white">
+              What services are you interested in?
+            </p>
+            <div class="px-5 my-8">
+              <input
+                type="checkbox"
+                id="design"
+                name="Tire Install"
+                value="Tire Install"
+                class="mr-2"
+              />
+              <label for="Tire Installation">Tire installation</label>
+            </div>
+            <div class="px-5 my-8">
+              <input type="checkbox" id="dev" name="Breaks" value="Breaks" />
+              <label for="Breaks">Breaks</label>
+            </div>
+            <div class="px-5 my-8">
+              <input
+                type="checkbox"
+                id="seo"
+                name="Oil Change"
+                value="Oil Change"
+                class="mr-2"
+              />
+              <label for="Oil">Oil Change</label>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
+      <div class="py-5">
+        <label for="phone" class="text-primary font-semibold text-white">
+          Phone Number:
+          <input
+            type="tel"
+            name="Phone Number:"
+            min="1"
+            max="9"
+            class="w-full text-white rounded-md h-10 px-2"
+            placeholder="Enter Your Phone Number"
+            required
+          />
+        </label>
+      </div>
+      <div class="py-5">
+        <label for="email" class="text-primary font-semibold text-white">
+          Email Address:
+          <input
+            type="email"
+            name="Email"
+            class="w-full text-white rounded-md h-10 px-2"
+            placeholder="Enter Your Email Address"
+            required
+          />
+        </label>
+      </div>
+      <div class="pb-10">
+        <label for="year" class="text-primary font-semibold text-white pb-10">
+          Year:
+          <select
+            name="Year"
+            id="year"
+            class="w-full text-white rounded-md h-10 px-2"
+            required
+          >
+            <!-- Example year options -->
+            <option value="" disabled selected>Select Year</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            <option value="1990">1990</option>
+            <!-- Add more years as needed -->
+          </select>
+        </label>
+      </div>
+      <div class="pb-10">
+        <label
+          for="car-make"
+          class="text-primary font-semibold text-white pb-10"
+        >
+          Car Make:
+          <select
+            name="CarMake"
+            id="car-make"
+            class="w-full text-white rounded-md h-10 px-2"
+            required
+          >
+            <option value="" disabled selected>Select Make</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="buick">Buick</option>
+            <option value="cadillac">Cadillac</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="chrysler">Chrysler</option>
 
-        <!-- <section class="animate">
+            <option value="dodge">Dodge</option>
+
+            <option value="ford">Ford</option>
+            <option value="genesis">Genesis</option>
+            <option value="gmc">GMC</option>
+            <option value="honda">Honda</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="infiniti">Infiniti</option>
+            <option value="jaguar">Jaguar</option>
+            <option value="jeep">Jeep</option>
+            <option value="kia">Kia</option>
+            <option value="land-rover">Land Rover</option>
+            <option value="lexus">Lexus</option>
+            <option value="lincoln">Lincoln</option>
+
+            <option value="mazda">Mazda</option>
+            <option value="mercedes">Mercedes-Benz</option>
+
+            <option value="mitsubishi">Mitsubishi</option>
+            <option value="nissan">Nissan</option>
+
+            <option value="subaru">Subaru</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="toyota">Toyota</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="volvo">Volvo</option>
+          </select>
+        </label>
+      </div>
+      <div class="pb-10">
+        <label for="Model" class="text-primary font-semibold text-white pb-10">
+          Model:
+          <textarea
+            name="Model"
+            class="w-full text-white rounded-md h-10 p-2"
+            placeholder="Model"></textarea>
+        </label>
+      </div>
+      <div class="pb-10">
+        <label
+          for="message"
+          class="text-primary font-semibold text-white pb-10"
+        >
+          Message:
+          <textarea
+            name="Message"
+            class="w-full text-white rounded-md h-28 p-2"
+            placeholder="Message"></textarea>
+        </label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="button-36">Submit</button>
+      </div>
+    </div>
+  </div>
+</PageLayout>
+
+<!-- <section class="animate">
         <div>
           <p class="font-semibold text-black dark:text-white">
             Let's Connect
@@ -474,142 +472,152 @@ const stack = [
             ))}
         </div>
       </section> -->
-      </section>
-    </div>
-    <footer class="bg-primary bg-opacity-5">
-      <section class="w-5/6 mx-auto">
-        <hr class="text-primary opacity-10" />
-        <p
-          class="mt-5 text-center text-xs leading-5 text-gray-500 pb-10 animate"
-        >
-          &copy; {new Date().getFullYear()}
-          <a aria-label="Home" href="https://www.howltechsolutions.com"
-            ><strong class="animate">HowlTechSolutions.com</strong></a
-          > | Website By{" "}
-          <a href="https://www.wyatthowlett.ca" target="_blank">
-            <strong class="animate">Wyatt Howlett</strong>
-          </a>{" "}
-          | All Rights reserved.
-        </p>
-      </section>
-    </footer>
-  </div>
-  <style lang="scss">
-    /* CSS */
+
+<footer class="bg-primary bg-opacity-5">
+  <section class="w-5/6 mx-auto">
+    <hr class="text-primary opacity-10" />
+    <p class="mt-5 text-center text-xs leading-5 text-gray-500 pb-10 animate">
+      &copy; {new Date().getFullYear()}
+      <a aria-label="Home" href="https://www.howltechsolutions.com"
+        ><strong class="animate">HowlTechSolutions.com</strong></a
+      > | Website By{" "}
+      <a href="https://www.wyatthowlett.ca" target="_blank">
+        <strong class="animate">Wyatt Howlett</strong>
+      </a>{" "}
+      | All Rights reserved.
+    </p>
+  </section>
+</footer>
+
+<style lang="scss">
+  /* CSS */
+  .button-36 {
+    background-image: linear-gradient(
+      92.88deg,
+      #455eb5 9.16%,
+      #5643cc 43.89%,
+      #673fd7 64.72%
+    );
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family:
+      "Inter UI",
+      "SF Pro Display",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 3rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all 0.5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-36:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: 0.1s;
+  }
+
+  @media (min-width: 768px) {
     .button-36 {
-      background-image: linear-gradient(
-        92.88deg,
-        #455eb5 9.16%,
-        #5643cc 43.89%,
-        #673fd7 64.72%
-      );
-      border-radius: 8px;
-      border-style: none;
-      box-sizing: border-box;
-      color: #ffffff;
-      cursor: pointer;
-      flex-shrink: 0;
-      font-family:
-        "Inter UI",
-        "SF Pro Display",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      height: 3rem;
-      padding: 0 1.6rem;
-      text-align: center;
-      text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-      transition: all 0.5s;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
+      padding: 0 2.6rem;
+    }
+  }
+  .primary:link,
+  .primary:visited {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+
+    &:hover,
+    &:focus {
+      text-decoration-color: currentColor;
+    }
+  }
+
+  .contact-info {
+    text-align: center;
+
+    &__heading {
+      font-size: var(--text-2xl);
     }
 
-    .button-36:hover {
-      box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-      transition-duration: 0.1s;
+    &__description {
+      color: var(--gray-999-basis);
+    }
+  }
+  .rounded:link,
+  .rounded:visited {
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    color: var(--accent-text-over);
+    border: 2px solid var(--accent-regular);
+    background-color: var(--accent-regular);
+    border-radius: 999rem;
+    font-size: var(--text-md);
+    line-height: 1.35;
+    white-space: nowrap;
+    transition: all var(--theme-transition);
+
+    &.inverted {
+      background-color: transparent;
+      border: 2px solid var(--accent-dark);
+      color: var(--accent-dark);
     }
 
-    @media (min-width: 768px) {
-      .button-36 {
-        padding: 0 2.6rem;
-      }
+    &:hover,
+    &:focus {
+      background-color: var(--accent-dark);
+      border: 2px solid var(--accent-dark);
+      color: var(--accent-light);
     }
-    .primary:link,
-    .primary:visited {
-      text-decoration: 1px solid underline transparent;
-      text-underline-offset: 0.25em;
-      transition: text-decoration-color var(--theme-transition);
-
-      &:hover,
-      &:focus {
-        text-decoration-color: currentColor;
-      }
+  }
+  @media (min-width: 50em) {
+    aside {
+      padding: 5.5rem;
+      grid-template-columns: 5fr 3fr;
+      justify-content: space-between;
     }
 
     .contact-info {
-      text-align: center;
+      text-align: left;
+      max-width: 35rem;
 
       &__heading {
-        font-size: var(--text-2xl);
-      }
-
-      &__description {
-        color: var(--gray-999-basis);
+        font-size: var(--text-3xl);
       }
     }
-    .rounded:link,
-    .rounded:visited {
-      display: flex;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      gap: 0.5rem;
-      color: var(--accent-text-over);
-      border: 2px solid var(--accent-regular);
-      background-color: var(--accent-regular);
-      border-radius: 999rem;
-      font-size: var(--text-md);
-      line-height: 1.35;
-      white-space: nowrap;
-      transition: all var(--theme-transition);
+  }
 
-      &.inverted {
-        background-color: transparent;
-        border: 2px solid var(--accent-dark);
-        color: var(--accent-dark);
-      }
-
-      &:hover,
-      &:focus {
-        background-color: var(--accent-dark);
-        border: 2px solid var(--accent-dark);
-        color: var(--accent-light);
-      }
+  /* Optional animation for list items */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
-    @media (min-width: 50em) {
-      aside {
-        padding: 5.5rem;
-        grid-template-columns: 5fr 3fr;
-        justify-content: space-between;
-      }
-
-      .contact-info {
-        text-align: left;
-        max-width: 35rem;
-
-        &__heading {
-          font-size: var(--text-3xl);
-        }
-      }
+    to {
+      opacity: 1;
     }
-  </style>
-</PageLayout>
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in;
+  }
+</style>
