@@ -187,18 +187,24 @@ const stack = [
             ))}
           </div> -->
           <div class="text-center px-5 my-8">
-            <ul class="list-none p-0 m-0"></a>
-              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Tire Installation</a></li>
+            <a class="list-none p-0 m-0"></a>
+            <li class="mb-5 text-lg animate-fadeIn">
+              <a href="#contact">Tire Installation</a>
+            </li>
 
-              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Brakes</a></li>
-              <li class="mb-5 text-lg animate-fadeIn"><a href="#contact">Oil Changes</a></li>
-            </ul>
+            <li class="mb-5 text-lg animate-fadeIn">
+              <a href="#contact">Brakes</a>
+            </li>
+            <li class="mb-5 text-lg animate-fadeIn">
+              <a href="#contact">Oil Changes</a>
+            </li>
           </div>
         </div>
       </section>
+    </div>
 
-      <!-- Project Preview Section -->
-      <!-- <section class="animate">
+    <!-- Project Preview Section -->
+    <!-- <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
@@ -220,18 +226,20 @@ const stack = [
         </div>
       </section> -->
 
-      <!-- Contact Section -->
-      <div
-        class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+    <!-- Contact Section -->
+
+    <div
+      class="flex justify-center text-primary text-mlgfont-semibold sm:text-2xl px-4 mb-20"
+    >
+      <h2
+        class="text-center font-semibold text-black dark:text-white"
+        id="contact"
       >
-        <h2
-          class="text-center font-semibold text-black dark:text-white"
-          id="contact"
-        >
-          Contact Me
-        </h2>
-      </div>
-      <section class="w-5/6 rounded-xl mx-auto bg-fit">
+        Contact Me
+      </h2>
+    </div>
+    <form class="w-5/6 rounded-xl mx-auto bg-fit" method="POST" action="https://usebasin.com/f/09bb4ba27ed3">
+      
         <div
           class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
         >
@@ -292,158 +300,162 @@ const stack = [
             </div>
           </div>
         </div>
-      </section>
-      <div class="py-5">
-        <label for="phone" class="text-primary font-semibold text-white">
-          Phone Number:
-          <input
-            type="tel"
-            name="Phone Number:"
-            min="1"
-            max="9"
-            class="w-full text-white rounded-md h-10 px-2"
-            placeholder="Enter Your Phone Number"
-            required
-          />
-        </label>
-      </div>
-      <div class="py-5">
-        <label for="email" class="text-primary font-semibold text-white">
-          Email Address:
-          <input
-            type="email"
-            name="Email"
-            class="w-full text-white rounded-md h-10 px-2"
-            placeholder="Enter Your Email Address"
-            required
-          />
-        </label>
-      </div>
-      <div class="pb-10">
-        <label for="year" class="text-primary font-semibold text-white pb-10">
-          Year:
-          <select
-            name="Year"
-            id="year"
-            class="w-full text-white rounded-md h-10 px-2"
-            required
+
+        <div class="py-5">
+          <label for="phone" class="text-primary font-semibold text-white">
+            Phone Number:
+            <input
+              type="tel"
+              name="Phone Number:"
+              min="1"
+              max="9"
+              class="w-full text-white rounded-md h-10 px-2"
+              placeholder="Enter Your Phone Number"
+              required
+            />
+          </label>
+        </div>
+        <div class="py-5">
+          <label for="email" class="text-primary font-semibold text-white">
+            Email Address:
+            <input
+              type="email"
+              name="Email"
+              class="w-full text-white rounded-md h-10 px-2"
+              placeholder="Enter Your Email Address"
+              required
+            />
+          </label>
+        </div>
+        <div class="pb-10">
+          <label for="year" class="text-primary font-semibold text-white pb-10">
+            Year:
+            <select
+              name="Year"
+              id="year"
+              class="w-full text-white rounded-md h-10 px-2"
+              required
+            >
+              <!-- Example year options -->
+              <option value="" disabled selected>Select Year</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <!-- Add more years as needed -->
+            </select>
+          </label>
+        </div>
+        <div class="pb-10">
+          <label
+            for="car-make"
+            class="text-primary font-semibold text-white pb-10"
           >
-            <!-- Example year options -->
-            <option value="" disabled selected>Select Year</option>
-            <option value="2024">2024</option>
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-            <option value="2014">2014</option>
-            <option value="2013">2013</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
-            <option value="2010">2010</option>
-            <option value="2009">2009</option>
-            <option value="2008">2008</option>
-            <option value="2007">2007</option>
-            <option value="2006">2006</option>
-            <option value="2005">2005</option>
-            <option value="2004">2004</option>
-            <option value="2003">2003</option>
-            <option value="2002">2002</option>
-            <option value="2001">2001</option>
-            <option value="2000">2000</option>
-            <option value="1999">1999</option>
-            <option value="1998">1998</option>
-            <option value="1997">1997</option>
-            <option value="1996">1996</option>
-            <option value="1995">1995</option>
-            <option value="1994">1994</option>
-            <option value="1993">1993</option>
-            <option value="1992">1992</option>
-            <option value="1991">1991</option>
-            <option value="1990">1990</option>
-            <!-- Add more years as needed -->
-          </select>
-        </label>
-      </div>
-      <div class="pb-10">
-        <label
-          for="car-make"
-          class="text-primary font-semibold text-white pb-10"
-        >
-          Car Make:
-          <select
-            name="CarMake"
-            id="car-make"
-            class="w-full text-white rounded-md h-10 px-2"
-            required
+            Car Make:
+            <select
+              name="Car Make"
+              id="car-make"
+              class="w-full text-white rounded-md h-10 px-2"
+              required
+            >
+              <option value="" disabled selected>Select Make</option>
+              <option value="audi">Audi</option>
+              <option value="bmw">BMW</option>
+              <option value="buick">Buick</option>
+              <option value="cadillac">Cadillac</option>
+              <option value="chevrolet">Chevrolet</option>
+              <option value="chrysler">Chrysler</option>
+
+              <option value="dodge">Dodge</option>
+
+              <option value="ford">Ford</option>
+              <option value="genesis">Genesis</option>
+              <option value="gmc">GMC</option>
+              <option value="honda">Honda</option>
+              <option value="hyundai">Hyundai</option>
+              <option value="infiniti">Infiniti</option>
+              <option value="jaguar">Jaguar</option>
+              <option value="jeep">Jeep</option>
+              <option value="kia">Kia</option>
+              <option value="land-rover">Land Rover</option>
+              <option value="lexus">Lexus</option>
+              <option value="lincoln">Lincoln</option>
+
+              <option value="mazda">Mazda</option>
+              <option value="mercedes">Mercedes-Benz</option>
+
+              <option value="mitsubishi">Mitsubishi</option>
+              <option value="nissan">Nissan</option>
+
+              <option value="subaru">Subaru</option>
+              <option value="suzuki">Suzuki</option>
+              <option value="toyota">Toyota</option>
+              <option value="volkswagen">Volkswagen</option>
+              <option value="volvo">Volvo</option>
+            </select>
+          </label>
+        </div>
+        <div class="pb-10">
+          <label
+            for="Model"
+            class="text-primary font-semibold text-white pb-10"
           >
-            <option value="" disabled selected>Select Make</option>
-            <option value="audi">Audi</option>
-            <option value="bmw">BMW</option>
-            <option value="buick">Buick</option>
-            <option value="cadillac">Cadillac</option>
-            <option value="chevrolet">Chevrolet</option>
-            <option value="chrysler">Chrysler</option>
+            Model:
+            <textarea
+              name="Model"
+              class="w-full text-white rounded-md h-10 p-2"
+              placeholder="Model"></textarea>
+          </label>
+        </div>
+        <div class="pb-10">
+          <label
+            for="message"
+            class="text-primary font-semibold text-white pb-10"
+          >
+            Message:
+            <textarea
+              name="Message"
+              class="w-full text-white rounded-md h-28 p-2"
+              placeholder="Message"></textarea>
+          </label>
+        </div>
 
-            <option value="dodge">Dodge</option>
-
-            <option value="ford">Ford</option>
-            <option value="genesis">Genesis</option>
-            <option value="gmc">GMC</option>
-            <option value="honda">Honda</option>
-            <option value="hyundai">Hyundai</option>
-            <option value="infiniti">Infiniti</option>
-            <option value="jaguar">Jaguar</option>
-            <option value="jeep">Jeep</option>
-            <option value="kia">Kia</option>
-            <option value="land-rover">Land Rover</option>
-            <option value="lexus">Lexus</option>
-            <option value="lincoln">Lincoln</option>
-
-            <option value="mazda">Mazda</option>
-            <option value="mercedes">Mercedes-Benz</option>
-
-            <option value="mitsubishi">Mitsubishi</option>
-            <option value="nissan">Nissan</option>
-
-            <option value="subaru">Subaru</option>
-            <option value="suzuki">Suzuki</option>
-            <option value="toyota">Toyota</option>
-            <option value="volkswagen">Volkswagen</option>
-            <option value="volvo">Volvo</option>
-          </select>
-        </label>
-      </div>
-      <div class="pb-10">
-        <label for="Model" class="text-primary font-semibold text-white pb-10">
-          Model:
-          <textarea
-            name="Model"
-            class="w-full text-white rounded-md h-10 p-2"
-            placeholder="Model"></textarea>
-        </label>
-      </div>
-      <div class="pb-10">
-        <label
-          for="message"
-          class="text-primary font-semibold text-white pb-10"
-        >
-          Message:
-          <textarea
-            name="Message"
-            class="w-full text-white rounded-md h-28 p-2"
-            placeholder="Message"></textarea>
-        </label>
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="button-36">Submit</button>
-      </div>
-    </div>
+        <div class="text-center">
+          <button type="submit" class="button-36">Submit</button>
+        </div>
+      
+      </form>
   </div>
 </PageLayout>
 
