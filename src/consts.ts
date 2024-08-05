@@ -39,7 +39,7 @@ export const LINKS: Links = [
   },
   { 
     TEXT: "Contact", 
-    HREF: "#contact", 
+    HREF: "/#contact", 
   },
   
 ]
