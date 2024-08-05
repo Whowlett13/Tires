@@ -248,7 +248,10 @@ const stack = [
       >
         <div>
           <div class="py-5">
-            <label for="fName" class="text-primary font-semibold text-white bg-gray-1000">
+            <label
+              for="fName"
+              class="text-primary font-semibold text-white bg-gray-1000"
+            >
               First Name:
               <input
                 type="text"
@@ -259,7 +262,10 @@ const stack = [
               />
             </label>
             <div class="py-5">
-              <label for="lName" class="text-primary font-semibold text-white bg-gray-900">
+              <label
+                for="lName"
+                class="text-primary font-semibold text-white bg-gray-900"
+              >
                 Last Name:
                 <input
                   type="text"
@@ -445,27 +451,27 @@ const stack = [
               for="date"
               class="text-primary font-semibold text-white h-10 mt-4"
             >
-            Date:
+              Date:
               <select
                 id="day"
                 name="day"
-                class="w-full text-white rounded-md h-10  bg-gray-1000"
+                class="w-full text-white rounded-md h-10 bg-gray-1000"
+                
                 required
               >
-              <option value="" disabled selected>Select a day</option>
-              <option value="monday">Monday</option>
-              <option value="tuesday">Tuesday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              
+                <option value="" disabled selected>Select a day</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
               </select>
             </label>
           </div>
           <div class="pb-10">
             <label
               for="time"
-              class="text-primary font-semibold text-white mt-4 "
+              class="text-primary font-semibold text-white mt-4"
             >
               Time:
               <select
@@ -499,6 +505,9 @@ const stack = [
       <div class="text-center">
         <button type="submit" class="button-36">Submit</button>
       </div>
+      <p class="text-center pt-10 text-white">
+        Inquiries Will Be Confirmed Within 24 Hours
+      </p>
     </form>
   </div>
 </PageLayout>
