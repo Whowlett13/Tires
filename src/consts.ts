@@ -41,14 +41,7 @@ export const LINKS: Links = [
     TEXT: "Contact", 
     HREF: "#contact", 
   },
-  // { 
-  //   TEXT: "Blog", 
-  //   HREF: "/blog", 
-  // },
-  // { 
-  //   TEXT: "Projects", 
-  //   HREF: "/projects", 
-  // },
+  
 ]
 
 // Socials
@@ -65,17 +58,6 @@ export const SOCIALS: Socials = [
     TEXT: "Whowlett13",
     HREF: "https://github.com/whowlett13/"
   },
-  { 
-    NAME: "LinkedIn",
-    ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
-  },
-  { 
-    NAME: "Twitter",
-    ICON: "twitter-x",
-    TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
-  },
+ 
 ]
 
